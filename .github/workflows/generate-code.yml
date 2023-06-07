@@ -28,6 +28,7 @@ jobs:
         run: |
           rsync -a ./python-client/ ./
           rm -Rf ./python-client
+          rm ./.github/workflows/python.yml
 
       - name: Push to repo
         run: |
