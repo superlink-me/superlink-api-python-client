@@ -17,6 +17,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Set version
+        run: |
+          cat ./generator-config.yml >> ./generator-config-edit.yml
+          echo "packageVersion: \"${{ github.event.client_payload.tag }}\"" >> ./generator-config-edit.yml
+          
       - name: Generate Client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
@@ -29,6 +34,7 @@ jobs:
           rsync -a ./python-client/ ./
           rm -Rf ./python-client
           rm ./.github/workflows/python.yml
+          rm ./generator-config-edit.yml
 
       - name: Push to repo
         run: |
