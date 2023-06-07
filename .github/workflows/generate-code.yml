@@ -1,0 +1,44 @@
+name: Generate Client
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [generate_code]
+
+jobs:
+  generate-python-client:
+    runs-on: ubuntu-latest
+    name: Generate a Python client
+    env: 
+      CI_COMMIT_MESSAGE: automated commit
+      CI_COMMIT_AUTHOR: Superlink Bot
+      CI_COMMIT_EMAIL: henry+superlinkbot@superlink.me
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Generate Client
+        uses: openapi-generators/openapitools-generator-action@v1
+        with:
+          generator: python
+          openapi-url: https://api.superlink.me/v1/docs/doc.json
+          config-file: ./generator-config.yml
+
+      - name: Clean
+        run: |
+          rsync -a ./python-client/ ./
+          rm -Rf ./python-client
+
+      - name: Push to repo
+        run: |
+          if [[ -z $(git status -s) ]]
+          then
+            echo "tree is clean"
+          else
+            echo "changes found, commiting"
+            git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+            git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
+            git add .
+            git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+            git push
+          fi
