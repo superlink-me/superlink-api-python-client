@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Superlink API
+    Superlink
 
     API for Superlink  # noqa: E501
 

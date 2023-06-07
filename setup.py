@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Superlink API
+    Superlink
 
     API for Superlink  # noqa: E501
 
@@ -34,11 +34,11 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="Superlink API",
+    description="Superlink",
     author="API Support",
     author_email="support@superlink.me",
     url="",
-    keywords=["OpenAPI", "OpenAPI-Generator", "Superlink API"],
+    keywords=["OpenAPI", "OpenAPI-Generator", "Superlink"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,

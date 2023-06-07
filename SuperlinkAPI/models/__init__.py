@@ -2,7 +2,7 @@
 
 # flake8: noqa
 """
-    Superlink API
+    Superlink
 
     API for Superlink  # noqa: E501
 

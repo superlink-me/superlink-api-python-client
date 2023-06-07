@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "SuperlinkAPI"
 version = "1.0.0"
-description = "Superlink API"
+description = "Superlink"
 authors = ["API Support <support@superlink.me>"]
 license = "NoLicense"
 readme = "README.md"
 repository = "https://github.com/superlink-me/superlink-api-python-client"
-keywords = ["OpenAPI", "OpenAPI-Generator", "Superlink API"]
+keywords = ["OpenAPI", "OpenAPI-Generator", "Superlink"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
