@@ -22,12 +22,13 @@ import json
 from typing import Optional
 from pydantic import BaseModel, StrictStr
 
-class ApiAccessTokenDeleteRequest(BaseModel):
+class ApiErrorResponse(BaseModel):
     """
-    ApiAccessTokenDeleteRequest
+    ApiErrorResponse
     """
-    id: Optional[StrictStr] = None
-    __properties = ["id"]
+    field: Optional[StrictStr] = None
+    info: Optional[StrictStr] = None
+    __properties = ["field", "info"]
 
     class Config:
         """Pydantic configuration"""
@@ -43,8 +44,8 @@ class ApiAccessTokenDeleteRequest(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> ApiAccessTokenDeleteRequest:
-        """Create an instance of ApiAccessTokenDeleteRequest from a JSON string"""
+    def from_json(cls, json_str: str) -> ApiErrorResponse:
+        """Create an instance of ApiErrorResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -56,16 +57,17 @@ class ApiAccessTokenDeleteRequest(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> ApiAccessTokenDeleteRequest:
-        """Create an instance of ApiAccessTokenDeleteRequest from a dict"""
+    def from_dict(cls, obj: dict) -> ApiErrorResponse:
+        """Create an instance of ApiErrorResponse from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return ApiAccessTokenDeleteRequest.parse_obj(obj)
+            return ApiErrorResponse.parse_obj(obj)
 
-        _obj = ApiAccessTokenDeleteRequest.parse_obj({
-            "id": obj.get("id")
+        _obj = ApiErrorResponse.parse_obj({
+            "field": obj.get("field"),
+            "info": obj.get("info")
         })
         return _obj
 

@@ -20,14 +20,21 @@ import json
 
 
 from typing import Optional
-from pydantic import BaseModel, StrictStr
+from pydantic import BaseModel, Field, StrictStr
 
-class ApiAccessTokenDeleteRequest(BaseModel):
+class ApiAccessTokenResponse(BaseModel):
     """
-    ApiAccessTokenDeleteRequest
+    ApiAccessTokenResponse
     """
+    created_at: Optional[StrictStr] = Field(None, alias="createdAt")
     id: Optional[StrictStr] = None
-    __properties = ["id"]
+    label: Optional[StrictStr] = None
+    type: Optional[StrictStr] = None
+    updated_at: Optional[StrictStr] = Field(None, alias="updatedAt")
+    valid_from: Optional[StrictStr] = Field(None, alias="validFrom")
+    valid_till: Optional[StrictStr] = Field(None, alias="validTill")
+    value: Optional[StrictStr] = None
+    __properties = ["createdAt", "id", "label", "type", "updatedAt", "validFrom", "validTill", "value"]
 
     class Config:
         """Pydantic configuration"""
@@ -43,8 +50,8 @@ class ApiAccessTokenDeleteRequest(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> ApiAccessTokenDeleteRequest:
-        """Create an instance of ApiAccessTokenDeleteRequest from a JSON string"""
+    def from_json(cls, json_str: str) -> ApiAccessTokenResponse:
+        """Create an instance of ApiAccessTokenResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -56,16 +63,23 @@ class ApiAccessTokenDeleteRequest(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> ApiAccessTokenDeleteRequest:
-        """Create an instance of ApiAccessTokenDeleteRequest from a dict"""
+    def from_dict(cls, obj: dict) -> ApiAccessTokenResponse:
+        """Create an instance of ApiAccessTokenResponse from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return ApiAccessTokenDeleteRequest.parse_obj(obj)
+            return ApiAccessTokenResponse.parse_obj(obj)
 
-        _obj = ApiAccessTokenDeleteRequest.parse_obj({
-            "id": obj.get("id")
+        _obj = ApiAccessTokenResponse.parse_obj({
+            "created_at": obj.get("createdAt"),
+            "id": obj.get("id"),
+            "label": obj.get("label"),
+            "type": obj.get("type"),
+            "updated_at": obj.get("updatedAt"),
+            "valid_from": obj.get("validFrom"),
+            "valid_till": obj.get("validTill"),
+            "value": obj.get("value")
         })
         return _obj
 

@@ -14,28 +14,24 @@
 
 
 import unittest
+import datetime
 
 import Superlink
-from Superlink.api.resolution_api import ResolutionApi  # noqa: E501
+from Superlink.models.data_access_token_type import DataAccessTokenType  # noqa: E501
 from Superlink.rest import ApiException
 
-
-class TestResolutionApi(unittest.TestCase):
-    """ResolutionApi unit test stubs"""
+class TestDataAccessTokenType(unittest.TestCase):
+    """DataAccessTokenType unit test stubs"""
 
     def setUp(self):
-        self.api = Superlink.api.resolution_api.ResolutionApi()  # noqa: E501
+        pass
 
     def tearDown(self):
         pass
 
-    def test_resolve_data_by_domain(self):
-        """Test case for resolve_data_by_domain
-
-        Resolves wallets and DNS records for a domain  # noqa: E501
-        """
-        pass
-
+    def testDataAccessTokenType(self):
+        """Test DataAccessTokenType"""
+        # inst = DataAccessTokenType()
 
 if __name__ == '__main__':
     unittest.main()

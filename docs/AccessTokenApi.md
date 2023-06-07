@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **create_access_token**
-> ApiAccessToken create_access_token(request)
+> ApiAccessTokenResponse create_access_token(request)
 
 Creates an admin token
 
@@ -23,8 +23,8 @@ Creates an admin token
 import time
 import os
 import Superlink
-from Superlink.models.api_access_token import ApiAccessToken
 from Superlink.models.api_access_token_create_request import ApiAccessTokenCreateRequest
+from Superlink.models.api_access_token_response import ApiAccessTokenResponse
 from Superlink.rest import ApiException
 from pprint import pprint
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiAccessToken**](ApiAccessToken.md)
+[**ApiAccessTokenResponse**](ApiAccessTokenResponse.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_access_tokens**
-> ApiAccessToken list_access_tokens()
+> ApiAccessTokenResponse list_access_tokens()
 
 Lists access tokens
 
@@ -181,7 +181,7 @@ Lists access tokens
 import time
 import os
 import Superlink
-from Superlink.models.api_access_token import ApiAccessToken
+from Superlink.models.api_access_token_response import ApiAccessTokenResponse
 from Superlink.rest import ApiException
 from pprint import pprint
 
@@ -222,7 +222,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ApiAccessToken**](ApiAccessToken.md)
+[**ApiAccessTokenResponse**](ApiAccessTokenResponse.md)
 
 ### Authorization
 

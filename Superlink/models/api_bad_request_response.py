@@ -19,15 +19,16 @@ import re  # noqa: F401
 import json
 
 
-from typing import Optional
-from pydantic import BaseModel, StrictStr
+from typing import List, Optional
+from pydantic import BaseModel, conlist
+from Superlink.models.api_error_response import ApiErrorResponse
 
-class ApiAccessTokenDeleteRequest(BaseModel):
+class ApiBadRequestResponse(BaseModel):
     """
-    ApiAccessTokenDeleteRequest
+    ApiBadRequestResponse
     """
-    id: Optional[StrictStr] = None
-    __properties = ["id"]
+    errors: Optional[conlist(ApiErrorResponse)] = None
+    __properties = ["errors"]
 
     class Config:
         """Pydantic configuration"""
@@ -43,8 +44,8 @@ class ApiAccessTokenDeleteRequest(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> ApiAccessTokenDeleteRequest:
-        """Create an instance of ApiAccessTokenDeleteRequest from a JSON string"""
+    def from_json(cls, json_str: str) -> ApiBadRequestResponse:
+        """Create an instance of ApiBadRequestResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -53,19 +54,26 @@ class ApiAccessTokenDeleteRequest(BaseModel):
                           exclude={
                           },
                           exclude_none=True)
+        # override the default output from pydantic by calling `to_dict()` of each item in errors (list)
+        _items = []
+        if self.errors:
+            for _item in self.errors:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['errors'] = _items
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> ApiAccessTokenDeleteRequest:
-        """Create an instance of ApiAccessTokenDeleteRequest from a dict"""
+    def from_dict(cls, obj: dict) -> ApiBadRequestResponse:
+        """Create an instance of ApiBadRequestResponse from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return ApiAccessTokenDeleteRequest.parse_obj(obj)
+            return ApiBadRequestResponse.parse_obj(obj)
 
-        _obj = ApiAccessTokenDeleteRequest.parse_obj({
-            "id": obj.get("id")
+        _obj = ApiBadRequestResponse.parse_obj({
+            "errors": [ApiErrorResponse.from_dict(_item) for _item in obj.get("errors")] if obj.get("errors") is not None else None
         })
         return _obj
 

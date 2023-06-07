@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import Superlink
-from Superlink.models.api_access_token_delete_request import ApiAccessTokenDeleteRequest  # noqa: E501
+from Superlink.models.api_bad_request_response import ApiBadRequestResponse  # noqa: E501
 from Superlink.rest import ApiException
 
-class TestApiAccessTokenDeleteRequest(unittest.TestCase):
-    """ApiAccessTokenDeleteRequest unit test stubs"""
+class TestApiBadRequestResponse(unittest.TestCase):
+    """ApiBadRequestResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,24 +30,28 @@ class TestApiAccessTokenDeleteRequest(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ApiAccessTokenDeleteRequest
+        """Test ApiBadRequestResponse
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ApiAccessTokenDeleteRequest`
+        # uncomment below to create an instance of `ApiBadRequestResponse`
         """
-        model = Superlink.models.api_access_token_delete_request.ApiAccessTokenDeleteRequest()  # noqa: E501
+        model = Superlink.models.api_bad_request_response.ApiBadRequestResponse()  # noqa: E501
         if include_optional :
-            return ApiAccessTokenDeleteRequest(
-                id = ''
+            return ApiBadRequestResponse(
+                errors = [
+                    Superlink.models.api/error_response.api.ErrorResponse(
+                        field = '', 
+                        info = '', )
+                    ]
             )
         else :
-            return ApiAccessTokenDeleteRequest(
+            return ApiBadRequestResponse(
         )
         """
 
-    def testApiAccessTokenDeleteRequest(self):
-        """Test ApiAccessTokenDeleteRequest"""
+    def testApiBadRequestResponse(self):
+        """Test ApiBadRequestResponse"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
