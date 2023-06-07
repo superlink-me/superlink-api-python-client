@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from Superlink.models.api_access_token_create_request import ApiAccessTokenCreateRequest
+from superlink.models.api_access_token_create_request import ApiAccessTokenCreateRequest
 
 # TODO update the JSON string below
 json = "{}"

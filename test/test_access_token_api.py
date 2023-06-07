@@ -15,16 +15,16 @@
 
 import unittest
 
-import Superlink
-from Superlink.api.access_token_api import AccessTokenApi  # noqa: E501
-from Superlink.rest import ApiException
+import superlink
+from superlink.api.access_token_api import AccessTokenApi  # noqa: E501
+from superlink.rest import ApiException
 
 
 class TestAccessTokenApi(unittest.TestCase):
     """AccessTokenApi unit test stubs"""
 
     def setUp(self):
-        self.api = Superlink.api.access_token_api.AccessTokenApi()  # noqa: E501
+        self.api = superlink.api.access_token_api.AccessTokenApi()  # noqa: E501
 
     def tearDown(self):
         pass

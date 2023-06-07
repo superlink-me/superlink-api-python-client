@@ -16,9 +16,9 @@
 import unittest
 import datetime
 
-import Superlink
-from Superlink.models.api_resolve_wallet_address_by_domain_response import ApiResolveWalletAddressByDomainResponse  # noqa: E501
-from Superlink.rest import ApiException
+import superlink
+from superlink.models.api_resolve_wallet_address_by_domain_response import ApiResolveWalletAddressByDomainResponse  # noqa: E501
+from superlink.rest import ApiException
 
 class TestApiResolveWalletAddressByDomainResponse(unittest.TestCase):
     """ApiResolveWalletAddressByDomainResponse unit test stubs"""
@@ -36,12 +36,12 @@ class TestApiResolveWalletAddressByDomainResponse(unittest.TestCase):
             optional params are included """
         # uncomment below to create an instance of `ApiResolveWalletAddressByDomainResponse`
         """
-        model = Superlink.models.api_resolve_wallet_address_by_domain_response.ApiResolveWalletAddressByDomainResponse()  # noqa: E501
+        model = superlink.models.api_resolve_wallet_address_by_domain_response.ApiResolveWalletAddressByDomainResponse()  # noqa: E501
         if include_optional :
             return ApiResolveWalletAddressByDomainResponse(
                 domain = '', 
                 records = [
-                    Superlink.models.api/dns_record.api.DNSRecord(
+                    superlink.models.api/dns_record.api.DNSRecord(
                         name = '', 
                         ttl = 56, 
                         type = '', 

@@ -16,9 +16,9 @@
 import unittest
 import datetime
 
-import Superlink
-from Superlink.models.api_dns_record import ApiDNSRecord  # noqa: E501
-from Superlink.rest import ApiException
+import superlink
+from superlink.models.api_dns_record import ApiDNSRecord  # noqa: E501
+from superlink.rest import ApiException
 
 class TestApiDNSRecord(unittest.TestCase):
     """ApiDNSRecord unit test stubs"""
@@ -36,7 +36,7 @@ class TestApiDNSRecord(unittest.TestCase):
             optional params are included """
         # uncomment below to create an instance of `ApiDNSRecord`
         """
-        model = Superlink.models.api_dns_record.ApiDNSRecord()  # noqa: E501
+        model = superlink.models.api_dns_record.ApiDNSRecord()  # noqa: E501
         if include_optional :
             return ApiDNSRecord(
                 name = '', 

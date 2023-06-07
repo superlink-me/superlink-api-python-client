@@ -16,9 +16,9 @@
 import unittest
 import datetime
 
-import Superlink
-from Superlink.models.api_internal_server_error_response import ApiInternalServerErrorResponse  # noqa: E501
-from Superlink.rest import ApiException
+import superlink
+from superlink.models.api_internal_server_error_response import ApiInternalServerErrorResponse  # noqa: E501
+from superlink.rest import ApiException
 
 class TestApiInternalServerErrorResponse(unittest.TestCase):
     """ApiInternalServerErrorResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestApiInternalServerErrorResponse(unittest.TestCase):
             optional params are included """
         # uncomment below to create an instance of `ApiInternalServerErrorResponse`
         """
-        model = Superlink.models.api_internal_server_error_response.ApiInternalServerErrorResponse()  # noqa: E501
+        model = superlink.models.api_internal_server_error_response.ApiInternalServerErrorResponse()  # noqa: E501
         if include_optional :
             return ApiInternalServerErrorResponse(
                 message = ''

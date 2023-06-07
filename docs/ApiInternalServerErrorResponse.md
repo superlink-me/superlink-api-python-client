@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from Superlink.models.api_internal_server_error_response import ApiInternalServerErrorResponse
+from superlink.models.api_internal_server_error_response import ApiInternalServerErrorResponse
 
 # TODO update the JSON string below
 json = "{}"

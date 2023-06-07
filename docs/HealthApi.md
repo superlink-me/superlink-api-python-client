@@ -1,4 +1,4 @@
-# Superlink.HealthApi
+# superlink.HealthApi
 
 All URIs are relative to *https://api.superlink.me*
 
@@ -19,21 +19,21 @@ Checks the health of the API
 ```python
 import time
 import os
-import Superlink
-from Superlink.rest import ApiException
+import superlink
+from superlink.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.superlink.me
 # See configuration.py for a list of all supported configuration parameters.
-configuration = Superlink.Configuration(
+configuration = superlink.Configuration(
     host = "https://api.superlink.me"
 )
 
 
 # Enter a context with an instance of the API client
-with Superlink.ApiClient(configuration) as api_client:
+with superlink.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Superlink.HealthApi(api_client)
+    api_instance = superlink.HealthApi(api_client)
 
     try:
         # Checks the health of the API

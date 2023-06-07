@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from Superlink.models.api_access_token_response import ApiAccessTokenResponse
+from superlink.models.api_access_token_response import ApiAccessTokenResponse
 
 # TODO update the JSON string below
 json = "{}"

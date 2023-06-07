@@ -15,16 +15,16 @@
 
 import unittest
 
-import Superlink
-from Superlink.api.health_api import HealthApi  # noqa: E501
-from Superlink.rest import ApiException
+import superlink
+from superlink.api.health_api import HealthApi  # noqa: E501
+from superlink.rest import ApiException
 
 
 class TestHealthApi(unittest.TestCase):
     """HealthApi unit test stubs"""
 
     def setUp(self):
-        self.api = Superlink.api.health_api.HealthApi()  # noqa: E501
+        self.api = superlink.api.health_api.HealthApi()  # noqa: E501
 
     def tearDown(self):
         pass

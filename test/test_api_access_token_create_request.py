@@ -16,9 +16,9 @@
 import unittest
 import datetime
 
-import Superlink
-from Superlink.models.api_access_token_create_request import ApiAccessTokenCreateRequest  # noqa: E501
-from Superlink.rest import ApiException
+import superlink
+from superlink.models.api_access_token_create_request import ApiAccessTokenCreateRequest  # noqa: E501
+from superlink.rest import ApiException
 
 class TestApiAccessTokenCreateRequest(unittest.TestCase):
     """ApiAccessTokenCreateRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestApiAccessTokenCreateRequest(unittest.TestCase):
             optional params are included """
         # uncomment below to create an instance of `ApiAccessTokenCreateRequest`
         """
-        model = Superlink.models.api_access_token_create_request.ApiAccessTokenCreateRequest()  # noqa: E501
+        model = superlink.models.api_access_token_create_request.ApiAccessTokenCreateRequest()  # noqa: E501
         if include_optional :
             return ApiAccessTokenCreateRequest(
                 label = '', 
