@@ -49,7 +49,7 @@ jobs:
         with:
           payload: |
             {
-              "text": "Python client generation failed!"
+              "text": ":red_circle: Python client generation failed!"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
@@ -64,7 +64,7 @@ jobs:
         with:
           payload: |
             {
-              "text": "Python client generation succeeded!"
+              "text": ":large_green_circle: Python client generation succeeded!"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
