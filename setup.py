@@ -22,7 +22,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "superlink"
-VERSION = "1.0.0"
+VERSION = "v0.0.1-alpha.5"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
     "urllib3 >= 1.25.3",

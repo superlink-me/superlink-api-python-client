@@ -15,7 +15,7 @@
 """
 
 
-__version__ = "1.0.0"
+__version__ = "v0.0.1-alpha.5"
 
 # import apis into sdk package
 from superlink.api.access_token_api import AccessTokenApi

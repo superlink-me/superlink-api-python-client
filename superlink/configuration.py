@@ -398,7 +398,7 @@ conf = superlink.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: v0.0.1-alpha.5\n"\
-               "SDK Package Version: 1.0.0".\
+               "SDK Package Version: v0.0.1-alpha.5".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):
