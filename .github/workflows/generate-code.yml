@@ -27,7 +27,7 @@ jobs:
         with:
           generator: python
           openapi-url: https://api.superlink.me/v1/docs/doc.json
-          config-file: ./generator-config.yml
+          config-file: ./generator-config-edit.yml
 
       - name: Clean
         run: |
