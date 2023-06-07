@@ -48,6 +48,8 @@ jobs:
             git add .
             git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
             git push
+            git tag ${{ github.event.client_payload.tag }}
+            git push origin --tags
           fi
       - name: Send failure message to Slack
         if: failure()
@@ -55,7 +57,7 @@ jobs:
         with:
           payload: |
             {
-              "text": ":red_circle: Python client generation failed!"
+              "text": ":red_circle: Python client ${{ github.event.client_payload.tag }} generation failed!"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
@@ -70,7 +72,7 @@ jobs:
         with:
           payload: |
             {
-              "text": ":large_green_circle: Python client generation succeeded!"
+              "text": ":large_green_circle: Python client ${{ github.event.client_payload.tag }} generation succeeded!"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
