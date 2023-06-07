@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from SuperlinkAPI.models.api_access_token_delete_request import ApiAccessTokenDeleteRequest
+from Superlink.models.api_access_token_delete_request import ApiAccessTokenDeleteRequest
 
 # TODO update the JSON string below
 json = "{}"

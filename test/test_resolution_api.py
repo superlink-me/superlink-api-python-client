@@ -15,16 +15,16 @@
 
 import unittest
 
-import SuperlinkAPI
-from SuperlinkAPI.api.resolution_api import ResolutionApi  # noqa: E501
-from SuperlinkAPI.rest import ApiException
+import Superlink
+from Superlink.api.resolution_api import ResolutionApi  # noqa: E501
+from Superlink.rest import ApiException
 
 
 class TestResolutionApi(unittest.TestCase):
     """ResolutionApi unit test stubs"""
 
     def setUp(self):
-        self.api = SuperlinkAPI.api.resolution_api.ResolutionApi()  # noqa: E501
+        self.api = Superlink.api.resolution_api.ResolutionApi()  # noqa: E501
 
     def tearDown(self):
         pass

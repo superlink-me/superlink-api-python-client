@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from SuperlinkAPI.models.api_response_error import ApiResponseError
+from Superlink.models.api_response_error import ApiResponseError
 
 # TODO update the JSON string below
 json = "{}"

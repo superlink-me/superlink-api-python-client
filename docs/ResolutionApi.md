@@ -1,4 +1,4 @@
-# SuperlinkAPI.ResolutionApi
+# Superlink.ResolutionApi
 
 All URIs are relative to *https://api.superlink.me*
 
@@ -20,14 +20,14 @@ resolve domain data by domain
 ```python
 import time
 import os
-import SuperlinkAPI
-from SuperlinkAPI.models.api_resolve_wallet_address_by_domain_response import ApiResolveWalletAddressByDomainResponse
-from SuperlinkAPI.rest import ApiException
+import Superlink
+from Superlink.models.api_resolve_wallet_address_by_domain_response import ApiResolveWalletAddressByDomainResponse
+from Superlink.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.superlink.me
 # See configuration.py for a list of all supported configuration parameters.
-configuration = SuperlinkAPI.Configuration(
+configuration = Superlink.Configuration(
     host = "https://api.superlink.me"
 )
 
@@ -43,9 +43,9 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with SuperlinkAPI.ApiClient(configuration) as api_client:
+with Superlink.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = SuperlinkAPI.ResolutionApi(api_client)
+    api_instance = Superlink.ResolutionApi(api_client)
     domain = 'domain_example' # str | firstname.lastname
 
     try:

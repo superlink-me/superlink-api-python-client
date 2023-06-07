@@ -16,9 +16,9 @@
 import unittest
 import datetime
 
-import SuperlinkAPI
-from SuperlinkAPI.models.api_access_token_delete_request import ApiAccessTokenDeleteRequest  # noqa: E501
-from SuperlinkAPI.rest import ApiException
+import Superlink
+from Superlink.models.api_access_token_delete_request import ApiAccessTokenDeleteRequest  # noqa: E501
+from Superlink.rest import ApiException
 
 class TestApiAccessTokenDeleteRequest(unittest.TestCase):
     """ApiAccessTokenDeleteRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestApiAccessTokenDeleteRequest(unittest.TestCase):
             optional params are included """
         # uncomment below to create an instance of `ApiAccessTokenDeleteRequest`
         """
-        model = SuperlinkAPI.models.api_access_token_delete_request.ApiAccessTokenDeleteRequest()  # noqa: E501
+        model = Superlink.models.api_access_token_delete_request.ApiAccessTokenDeleteRequest()  # noqa: E501
         if include_optional :
             return ApiAccessTokenDeleteRequest(
                 id = ''

@@ -1,4 +1,4 @@
-# SuperlinkAPI.AccessTokenApi
+# Superlink.AccessTokenApi
 
 All URIs are relative to *https://api.superlink.me*
 
@@ -22,15 +22,15 @@ Creates an admin token
 ```python
 import time
 import os
-import SuperlinkAPI
-from SuperlinkAPI.models.api_access_token import ApiAccessToken
-from SuperlinkAPI.models.api_access_token_create_request import ApiAccessTokenCreateRequest
-from SuperlinkAPI.rest import ApiException
+import Superlink
+from Superlink.models.api_access_token import ApiAccessToken
+from Superlink.models.api_access_token_create_request import ApiAccessTokenCreateRequest
+from Superlink.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.superlink.me
 # See configuration.py for a list of all supported configuration parameters.
-configuration = SuperlinkAPI.Configuration(
+configuration = Superlink.Configuration(
     host = "https://api.superlink.me"
 )
 
@@ -46,10 +46,10 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with SuperlinkAPI.ApiClient(configuration) as api_client:
+with Superlink.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = SuperlinkAPI.AccessTokenApi(api_client)
-    request = SuperlinkAPI.ApiAccessTokenCreateRequest() # ApiAccessTokenCreateRequest | access token create request
+    api_instance = Superlink.AccessTokenApi(api_client)
+    request = Superlink.ApiAccessTokenCreateRequest() # ApiAccessTokenCreateRequest | access token create request
 
     try:
         # Creates an admin token
@@ -102,14 +102,14 @@ Deletes an access token
 ```python
 import time
 import os
-import SuperlinkAPI
-from SuperlinkAPI.models.api_access_token_delete_request import ApiAccessTokenDeleteRequest
-from SuperlinkAPI.rest import ApiException
+import Superlink
+from Superlink.models.api_access_token_delete_request import ApiAccessTokenDeleteRequest
+from Superlink.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.superlink.me
 # See configuration.py for a list of all supported configuration parameters.
-configuration = SuperlinkAPI.Configuration(
+configuration = Superlink.Configuration(
     host = "https://api.superlink.me"
 )
 
@@ -125,10 +125,10 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with SuperlinkAPI.ApiClient(configuration) as api_client:
+with Superlink.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = SuperlinkAPI.AccessTokenApi(api_client)
-    request = SuperlinkAPI.ApiAccessTokenDeleteRequest() # ApiAccessTokenDeleteRequest | access token delete request
+    api_instance = Superlink.AccessTokenApi(api_client)
+    request = Superlink.ApiAccessTokenDeleteRequest() # ApiAccessTokenDeleteRequest | access token delete request
 
     try:
         # Deletes an access token
@@ -180,14 +180,14 @@ Lists access tokens
 ```python
 import time
 import os
-import SuperlinkAPI
-from SuperlinkAPI.models.api_access_token import ApiAccessToken
-from SuperlinkAPI.rest import ApiException
+import Superlink
+from Superlink.models.api_access_token import ApiAccessToken
+from Superlink.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.superlink.me
 # See configuration.py for a list of all supported configuration parameters.
-configuration = SuperlinkAPI.Configuration(
+configuration = Superlink.Configuration(
     host = "https://api.superlink.me"
 )
 
@@ -203,9 +203,9 @@ configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with SuperlinkAPI.ApiClient(configuration) as api_client:
+with Superlink.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = SuperlinkAPI.AccessTokenApi(api_client)
+    api_instance = Superlink.AccessTokenApi(api_client)
 
     try:
         # Lists access tokens

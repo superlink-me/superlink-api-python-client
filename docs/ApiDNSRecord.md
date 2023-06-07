@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from SuperlinkAPI.models.api_dns_record import ApiDNSRecord
+from Superlink.models.api_dns_record import ApiDNSRecord
 
 # TODO update the JSON string below
 json = "{}"

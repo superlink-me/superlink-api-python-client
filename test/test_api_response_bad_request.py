@@ -16,9 +16,9 @@
 import unittest
 import datetime
 
-import SuperlinkAPI
-from SuperlinkAPI.models.api_response_bad_request import ApiResponseBadRequest  # noqa: E501
-from SuperlinkAPI.rest import ApiException
+import Superlink
+from Superlink.models.api_response_bad_request import ApiResponseBadRequest  # noqa: E501
+from Superlink.rest import ApiException
 
 class TestApiResponseBadRequest(unittest.TestCase):
     """ApiResponseBadRequest unit test stubs"""
@@ -36,11 +36,11 @@ class TestApiResponseBadRequest(unittest.TestCase):
             optional params are included """
         # uncomment below to create an instance of `ApiResponseBadRequest`
         """
-        model = SuperlinkAPI.models.api_response_bad_request.ApiResponseBadRequest()  # noqa: E501
+        model = Superlink.models.api_response_bad_request.ApiResponseBadRequest()  # noqa: E501
         if include_optional :
             return ApiResponseBadRequest(
                 errors = [
-                    SuperlinkAPI.models.api/response_error.api.ResponseError(
+                    Superlink.models.api/response_error.api.ResponseError(
                         field = '', 
                         info = '', )
                     ]

@@ -16,9 +16,9 @@
 import unittest
 import datetime
 
-import SuperlinkAPI
-from SuperlinkAPI.models.api_access_token_type import ApiAccessTokenType  # noqa: E501
-from SuperlinkAPI.rest import ApiException
+import Superlink
+from Superlink.models.api_access_token_type import ApiAccessTokenType  # noqa: E501
+from Superlink.rest import ApiException
 
 class TestApiAccessTokenType(unittest.TestCase):
     """ApiAccessTokenType unit test stubs"""

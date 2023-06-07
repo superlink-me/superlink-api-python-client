@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from SuperlinkAPI.models.api_resolve_wallet_address_by_domain_response import ApiResolveWalletAddressByDomainResponse
+from Superlink.models.api_resolve_wallet_address_by_domain_response import ApiResolveWalletAddressByDomainResponse
 
 # TODO update the JSON string below
 json = "{}"
