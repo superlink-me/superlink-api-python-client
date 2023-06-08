@@ -22,20 +22,21 @@ from aenum import Enum, no_arg
 
 
 
-class DataAccessTokenType(str, Enum):
+class ApiCoin(str, Enum):
     """
-    DataAccessTokenType
+    ApiCoin
     """
 
     """
     allowed enum values
     """
-    ADMIN = 'ADMIN'
-    CUSTOMER = 'CUSTOMER'
+    BTC = 'BTC'
+    ETH = 'ETH'
+    XRP = 'XRP'
 
     @classmethod
-    def from_json(cls, json_str: str) -> DataAccessTokenType:
-        """Create an instance of DataAccessTokenType from a JSON string"""
-        return DataAccessTokenType(json.loads(json_str))
+    def from_json(cls, json_str: str) -> ApiCoin:
+        """Create an instance of ApiCoin from a JSON string"""
+        return ApiCoin(json.loads(json_str))
 
 

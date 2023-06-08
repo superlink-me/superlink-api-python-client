@@ -20,17 +20,18 @@ import json
 
 
 from typing import Optional
-from pydantic import BaseModel, StrictInt, StrictStr
+from pydantic import BaseModel, StrictStr
+from openapi_client.models.api_coin import ApiCoin
 
-class ApiDNSRecord(BaseModel):
+class ApiWalletData(BaseModel):
     """
-    ApiDNSRecord
+    ApiWalletData
     """
-    name: Optional[StrictStr] = None
-    ttl: Optional[StrictInt] = None
-    type: Optional[StrictStr] = None
-    value: Optional[StrictStr] = None
-    __properties = ["name", "ttl", "type", "value"]
+    address: Optional[StrictStr] = None
+    coin: Optional[ApiCoin] = None
+    network: Optional[StrictStr] = None
+    tag: Optional[StrictStr] = None
+    __properties = ["address", "coin", "network", "tag"]
 
     class Config:
         """Pydantic configuration"""
@@ -46,8 +47,8 @@ class ApiDNSRecord(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> ApiDNSRecord:
-        """Create an instance of ApiDNSRecord from a JSON string"""
+    def from_json(cls, json_str: str) -> ApiWalletData:
+        """Create an instance of ApiWalletData from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -59,19 +60,19 @@ class ApiDNSRecord(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> ApiDNSRecord:
-        """Create an instance of ApiDNSRecord from a dict"""
+    def from_dict(cls, obj: dict) -> ApiWalletData:
+        """Create an instance of ApiWalletData from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return ApiDNSRecord.parse_obj(obj)
+            return ApiWalletData.parse_obj(obj)
 
-        _obj = ApiDNSRecord.parse_obj({
-            "name": obj.get("name"),
-            "ttl": obj.get("ttl"),
-            "type": obj.get("type"),
-            "value": obj.get("value")
+        _obj = ApiWalletData.parse_obj({
+            "address": obj.get("address"),
+            "coin": obj.get("coin"),
+            "network": obj.get("network"),
+            "tag": obj.get("tag")
         })
         return _obj
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain** | **str** |  | [optional] 
 **records** | [**List[ApiDNSRecord]**](ApiDNSRecord.md) |  | [optional] 
-**wallets** | **Dict[str, str]** |  | [optional] 
+**wallets** | [**List[ApiWalletData]**](ApiWalletData.md) |  | [optional] 
 
 ## Example
 

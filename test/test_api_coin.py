@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import openapi_client
-from openapi_client.models.data_access_token_type import DataAccessTokenType  # noqa: E501
+from openapi_client.models.api_coin import ApiCoin  # noqa: E501
 from openapi_client.rest import ApiException
 
-class TestDataAccessTokenType(unittest.TestCase):
-    """DataAccessTokenType unit test stubs"""
+class TestApiCoin(unittest.TestCase):
+    """ApiCoin unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,9 +29,9 @@ class TestDataAccessTokenType(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testDataAccessTokenType(self):
-        """Test DataAccessTokenType"""
-        # inst = DataAccessTokenType()
+    def testApiCoin(self):
+        """Test ApiCoin"""
+        # inst = ApiCoin()
 
 if __name__ == '__main__':
     unittest.main()

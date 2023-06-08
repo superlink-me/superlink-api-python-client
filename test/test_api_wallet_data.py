@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import openapi_client
-from openapi_client.models.api_dns_record import ApiDNSRecord  # noqa: E501
+from openapi_client.models.api_wallet_data import ApiWalletData  # noqa: E501
 from openapi_client.rest import ApiException
 
-class TestApiDNSRecord(unittest.TestCase):
-    """ApiDNSRecord unit test stubs"""
+class TestApiWalletData(unittest.TestCase):
+    """ApiWalletData unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,27 +30,27 @@ class TestApiDNSRecord(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ApiDNSRecord
+        """Test ApiWalletData
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ApiDNSRecord`
+        # uncomment below to create an instance of `ApiWalletData`
         """
-        model = openapi_client.models.api_dns_record.ApiDNSRecord()  # noqa: E501
+        model = openapi_client.models.api_wallet_data.ApiWalletData()  # noqa: E501
         if include_optional :
-            return ApiDNSRecord(
-                name = 'firstname.lastname', 
-                ttl = 3600, 
-                type = 'A', 
-                value = '192.168.0.1'
+            return ApiWalletData(
+                address = '<wallet address>', 
+                coin = 'BTC', 
+                network = 'mainnet', 
+                tag = 'business'
             )
         else :
-            return ApiDNSRecord(
+            return ApiWalletData(
         )
         """
 
-    def testApiDNSRecord(self):
-        """Test ApiDNSRecord"""
+    def testApiWalletData(self):
+        """Test ApiWalletData"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
