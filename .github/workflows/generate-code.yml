@@ -48,9 +48,14 @@ jobs:
             git add .
             git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
             git push
-            git tag ${{ github.event.client_payload.tag }}
-            git push origin --tags
           fi
+      - uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ github.event.client_payload.tag }}
+          name: ${{ github.event.client_payload.release_name }}
+          body: ${{ github.event.client_payload.release_body }}
+          draft: ${{ github.event.client_payload.release_draft }}
+          prerelease:  ${{ github.event.client_payload.release_prerelease }}
       - name: Send failure message to Slack
         if: failure()
         uses: slackapi/slack-github-action@v1.23.0
