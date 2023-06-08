@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "openapi_client"
-version = "v0.0.1"
+version = "v0.0.2-alpha.1"
 description = "Superlink"
 authors = ["API Support <support@superlink.me>"]
 license = "NoLicense"
