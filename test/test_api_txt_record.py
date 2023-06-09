@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import openapi_client
-from openapi_client.models.api_error_response import ApiErrorResponse  # noqa: E501
+from openapi_client.models.api_txt_record import ApiTXTRecord  # noqa: E501
 from openapi_client.rest import ApiException
 
-class TestApiErrorResponse(unittest.TestCase):
-    """ApiErrorResponse unit test stubs"""
+class TestApiTXTRecord(unittest.TestCase):
+    """ApiTXTRecord unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,25 +30,25 @@ class TestApiErrorResponse(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ApiErrorResponse
+        """Test ApiTXTRecord
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ApiErrorResponse`
+        # uncomment below to create an instance of `ApiTXTRecord`
         """
-        model = openapi_client.models.api_error_response.ApiErrorResponse()  # noqa: E501
+        model = openapi_client.models.api_txt_record.ApiTXTRecord()  # noqa: E501
         if include_optional :
-            return ApiErrorResponse(
-                field = 'username', 
-                info = 'Invalid input'
+            return ApiTXTRecord(
+                key = '', 
+                value = ''
             )
         else :
-            return ApiErrorResponse(
+            return ApiTXTRecord(
         )
         """
 
-    def testApiErrorResponse(self):
-        """Test ApiErrorResponse"""
+    def testApiTXTRecord(self):
+        """Test ApiTXTRecord"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
