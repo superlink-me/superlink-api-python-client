@@ -4,6 +4,7 @@
 .openapi-generator-ignore
 .travis.yml
 README.md
+docs/AccessTokenApi.md
 docs/ApiAccessTokenCreateRequest.md
 docs/ApiAccessTokenDeleteRequest.md
 docs/ApiAccessTokenResponse.md
@@ -17,6 +18,7 @@ docs/ApiTXTRecord.md
 docs/ApiWalletData.md
 docs/DataAccessTokenType.md
 docs/DefaultApi.md
+docs/ResolutionApi.md
 git_push.sh
 pyproject.toml
 requirements.txt
@@ -24,7 +26,9 @@ setup.cfg
 setup.py
 superlink/__init__.py
 superlink/api/__init__.py
+superlink/api/access_token_api.py
 superlink/api/default_api.py
+superlink/api/resolution_api.py
 superlink/api_client.py
 superlink/api_response.py
 superlink/configuration.py
@@ -45,6 +49,7 @@ superlink/models/data_access_token_type.py
 superlink/rest.py
 test-requirements.txt
 test/__init__.py
+test/test_access_token_api.py
 test/test_api_access_token_create_request.py
 test/test_api_access_token_delete_request.py
 test/test_api_access_token_response.py
@@ -58,4 +63,5 @@ test/test_api_txt_record.py
 test/test_api_wallet_data.py
 test/test_data_access_token_type.py
 test/test_default_api.py
+test/test_resolution_api.py
 tox.ini

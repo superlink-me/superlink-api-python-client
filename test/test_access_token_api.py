@@ -16,30 +16,30 @@
 import unittest
 
 import superlink
-from superlink.api.default_api import DefaultApi  # noqa: E501
+from superlink.api.access_token_api import AccessTokenApi  # noqa: E501
 from superlink.rest import ApiException
 
 
-class TestDefaultApi(unittest.TestCase):
-    """DefaultApi unit test stubs"""
+class TestAccessTokenApi(unittest.TestCase):
+    """AccessTokenApi unit test stubs"""
 
     def setUp(self):
-        self.api = superlink.api.default_api.DefaultApi()  # noqa: E501
+        self.api = superlink.api.access_token_api.AccessTokenApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
-    def test_delete_access_token(self):
-        """Test case for delete_access_token
+    def test_create_access_token(self):
+        """Test case for create_access_token
 
-        Deletes an access token  # noqa: E501
+        Creates an admin token  # noqa: E501
         """
         pass
 
-    def test_health_check(self):
-        """Test case for health_check
+    def test_list_access_tokens(self):
+        """Test case for list_access_tokens
 
-        Checks the health of the API  # noqa: E501
+        Lists access tokens  # noqa: E501
         """
         pass
 
