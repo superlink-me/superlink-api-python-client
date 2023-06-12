@@ -46,6 +46,7 @@ superlink/models/api_resolve_domain_response.py
 superlink/models/api_txt_record.py
 superlink/models/api_wallet_data.py
 superlink/models/data_access_token_type.py
+superlink/py.typed
 superlink/rest.py
 test-requirements.txt
 test/__init__.py
