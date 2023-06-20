@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **coin** | [**ApiCoin**](ApiCoin.md) |  | [optional] 
 **network** | **str** |  | [optional] 
 **tag** | **str** |  | [optional] 
+**version** | **str** |  | [optional] 
 
 ## Example
 
