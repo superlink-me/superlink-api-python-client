@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import superlink
-from superlink.models.api_coin import ApiCoin  # noqa: E501
+from superlink.models.api_name_service import ApiNameService  # noqa: E501
 from superlink.rest import ApiException
 
-class TestApiCoin(unittest.TestCase):
-    """ApiCoin unit test stubs"""
+class TestApiNameService(unittest.TestCase):
+    """ApiNameService unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,9 +29,9 @@ class TestApiCoin(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testApiCoin(self):
-        """Test ApiCoin"""
-        # inst = ApiCoin()
+    def testApiNameService(self):
+        """Test ApiNameService"""
+        # inst = ApiNameService()
 
 if __name__ == '__main__':
     unittest.main()

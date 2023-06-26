@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **resolve_data_by_domain**
-> ApiResolveDomainResponse resolve_data_by_domain(domain)
+> ApiResolveDomainResponse resolve_data_by_domain(domain, nameservices=nameservices, coins=coins)
 
 Resolves wallets and DNS records for a domain
 
@@ -47,10 +47,12 @@ with superlink.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = superlink.ResolutionApi(api_client)
     domain = 'domain_example' # str | firstname.lastname
+    nameservices = ['nameservices_example'] # List[str] | superlink,ens,ud (optional)
+    coins = ['coins_example'] # List[str] | BTC,ETH,MATIC (optional)
 
     try:
         # Resolves wallets and DNS records for a domain
-        api_response = api_instance.resolve_data_by_domain(domain)
+        api_response = api_instance.resolve_data_by_domain(domain, nameservices=nameservices, coins=coins)
         print("The response of ResolutionApi->resolve_data_by_domain:\n")
         pprint(api_response)
     except Exception as e:
@@ -63,6 +65,8 @@ with superlink.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| firstname.lastname | 
+ **nameservices** | [**List[str]**](str.md)| superlink,ens,ud | [optional] 
+ **coins** | [**List[str]**](str.md)| BTC,ETH,MATIC | [optional] 
 
 ### Return type
 

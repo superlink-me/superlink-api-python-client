@@ -6,8 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | **str** |  | [optional] 
 **coin** | [**ApiCoin**](ApiCoin.md) |  | [optional] 
-**network** | **str** |  | [optional] 
-**tag** | **str** |  | [optional] 
 **version** | **str** |  | [optional] 
 
 ## Example

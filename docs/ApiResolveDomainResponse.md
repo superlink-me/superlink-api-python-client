@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **content_hash** | **str** |  | [optional] 
 **dns_records** | [**List[ApiDNSRecord]**](ApiDNSRecord.md) |  | [optional] 
 **domain** | **str** |  | [optional] 
-**provider** | **str** |  | [optional] 
+**name_service** | [**ApiNameService**](ApiNameService.md) |  | [optional] 
 **txt_records** | [**List[ApiTXTRecord]**](ApiTXTRecord.md) |  | [optional] 
 **wallets** | [**List[ApiWalletData]**](ApiWalletData.md) |  | [optional] 
 

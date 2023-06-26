@@ -22,20 +22,21 @@ from aenum import Enum, no_arg
 
 
 
-class DataAccessTokenType(str, Enum):
+class ApiNameService(str, Enum):
     """
-    DataAccessTokenType
+    ApiNameService
     """
 
     """
     allowed enum values
     """
-    ADMIN = 'ADMIN'
-    CUSTOMER = 'CUSTOMER'
+    UD = 'ud'
+    ENS = 'ens'
+    SUPERLINK = 'superlink'
 
     @classmethod
-    def from_json(cls, json_str: str) -> DataAccessTokenType:
-        """Create an instance of DataAccessTokenType from a JSON string"""
-        return DataAccessTokenType(json.loads(json_str))
+    def from_json(cls, json_str: str) -> ApiNameService:
+        """Create an instance of ApiNameService from a JSON string"""
+        return ApiNameService(json.loads(json_str))
 
 
