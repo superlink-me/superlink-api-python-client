@@ -19,16 +19,18 @@ import re  # noqa: F401
 import json
 
 
-from typing import List, Optional
-from pydantic import BaseModel, conlist
-from superlink.models.api_error_response import ApiErrorResponse
+from typing import Optional
+from pydantic import BaseModel, Field, StrictStr
 
-class ApiBadRequestResponse(BaseModel):
+class ApiSetReverseAddressRequest(BaseModel):
     """
-    ApiBadRequestResponse
+    ApiSetReverseAddressRequest
     """
-    errors: Optional[conlist(ApiErrorResponse)] = None
-    __properties = ["errors"]
+    address: Optional[StrictStr] = None
+    domain: Optional[StrictStr] = None
+    signed_message: Optional[StrictStr] = Field(None, alias="signedMessage")
+    user_id: Optional[StrictStr] = Field(None, alias="userId")
+    __properties = ["address", "domain", "signedMessage", "userId"]
 
     class Config:
         """Pydantic configuration"""
@@ -44,8 +46,8 @@ class ApiBadRequestResponse(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> ApiBadRequestResponse:
-        """Create an instance of ApiBadRequestResponse from a JSON string"""
+    def from_json(cls, json_str: str) -> ApiSetReverseAddressRequest:
+        """Create an instance of ApiSetReverseAddressRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -54,26 +56,22 @@ class ApiBadRequestResponse(BaseModel):
                           exclude={
                           },
                           exclude_none=True)
-        # override the default output from pydantic by calling `to_dict()` of each item in errors (list)
-        _items = []
-        if self.errors:
-            for _item in self.errors:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['errors'] = _items
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> ApiBadRequestResponse:
-        """Create an instance of ApiBadRequestResponse from a dict"""
+    def from_dict(cls, obj: dict) -> ApiSetReverseAddressRequest:
+        """Create an instance of ApiSetReverseAddressRequest from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return ApiBadRequestResponse.parse_obj(obj)
+            return ApiSetReverseAddressRequest.parse_obj(obj)
 
-        _obj = ApiBadRequestResponse.parse_obj({
-            "errors": [ApiErrorResponse.from_dict(_item) for _item in obj.get("errors")] if obj.get("errors") is not None else None
+        _obj = ApiSetReverseAddressRequest.parse_obj({
+            "address": obj.get("address"),
+            "domain": obj.get("domain"),
+            "signed_message": obj.get("signedMessage"),
+            "user_id": obj.get("userId")
         })
         return _obj
 

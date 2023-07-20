@@ -20,17 +20,21 @@ import json
 
 
 from typing import Optional
-from pydantic import BaseModel, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictStr
 
-class ApiDNSRecord(BaseModel):
+class ApiDomainMetadataResponse(BaseModel):
     """
-    ApiDNSRecord
+    ApiDomainMetadataResponse
     """
+    avatar: Optional[StrictStr] = None
+    description: Optional[StrictStr] = None
+    external_url: Optional[StrictStr] = None
+    image: Optional[StrictStr] = None
+    image_url: Optional[StrictStr] = None
     name: Optional[StrictStr] = None
-    ttl: Optional[StrictInt] = None
-    type: Optional[StrictStr] = None
-    value: Optional[StrictStr] = None
-    __properties = ["name", "ttl", "type", "value"]
+    namehash: Optional[StrictStr] = None
+    token_id: Optional[StrictStr] = Field(None, alias="tokenId")
+    __properties = ["avatar", "description", "external_url", "image", "image_url", "name", "namehash", "tokenId"]
 
     class Config:
         """Pydantic configuration"""
@@ -46,8 +50,8 @@ class ApiDNSRecord(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> ApiDNSRecord:
-        """Create an instance of ApiDNSRecord from a JSON string"""
+    def from_json(cls, json_str: str) -> ApiDomainMetadataResponse:
+        """Create an instance of ApiDomainMetadataResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -59,19 +63,23 @@ class ApiDNSRecord(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> ApiDNSRecord:
-        """Create an instance of ApiDNSRecord from a dict"""
+    def from_dict(cls, obj: dict) -> ApiDomainMetadataResponse:
+        """Create an instance of ApiDomainMetadataResponse from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return ApiDNSRecord.parse_obj(obj)
+            return ApiDomainMetadataResponse.parse_obj(obj)
 
-        _obj = ApiDNSRecord.parse_obj({
+        _obj = ApiDomainMetadataResponse.parse_obj({
+            "avatar": obj.get("avatar"),
+            "description": obj.get("description"),
+            "external_url": obj.get("external_url"),
+            "image": obj.get("image"),
+            "image_url": obj.get("image_url"),
             "name": obj.get("name"),
-            "ttl": obj.get("ttl"),
-            "type": obj.get("type"),
-            "value": obj.get("value")
+            "namehash": obj.get("namehash"),
+            "token_id": obj.get("tokenId")
         })
         return _obj
 

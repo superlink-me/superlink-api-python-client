@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **dns_records** | [**List[ApiDNSRecord]**](ApiDNSRecord.md) |  | [optional] 
 **domain** | **str** |  | [optional] 
 **name_service** | [**ApiNameService**](ApiNameService.md) |  | [optional] 
+**owner_address** | **str** |  | [optional] 
 **txt_records** | [**List[ApiTXTRecord]**](ApiTXTRecord.md) |  | [optional] 
 **wallets** | [**List[ApiWalletData]**](ApiWalletData.md) |  | [optional] 
 
