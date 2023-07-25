@@ -4,7 +4,7 @@ All URIs are relative to *https://api.superlink.me*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_token_image_by_domain**](NftApi.md#get_token_image_by_domain) | **GET** /v1/card-image/{domain} | Returns a SVG image for a Superlink NFT
+[**get_token_image_by_domain**](NftApi.md#get_token_image_by_domain) | **GET** /v1/card-image/{domain}.svg | Returns a SVG image for a Superlink NFT
 [**get_token_metadata_by_domain**](NftApi.md#get_token_metadata_by_domain) | **GET** /v1/metadata/{domain} | Returns metadata usually associated with NFTs uri
 
 
@@ -17,7 +17,6 @@ returns the image for a \"domain\" nft
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
 ```python
 import time
 import os
@@ -31,16 +30,6 @@ configuration = superlink.Configuration(
     host = "https://api.superlink.me"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with superlink.ApiClient(configuration) as api_client:
@@ -70,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -95,7 +84,6 @@ returns the metadata for a \"domain\" nft
 
 ### Example
 
-* Api Key Authentication (BearerAuth):
 ```python
 import time
 import os
@@ -110,16 +98,6 @@ configuration = superlink.Configuration(
     host = "https://api.superlink.me"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: BearerAuth
-configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with superlink.ApiClient(configuration) as api_client:
@@ -149,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+No authorization required
 
 ### HTTP request headers
 

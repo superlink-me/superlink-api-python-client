@@ -16,6 +16,7 @@ docs/ApiErrorResponse.md
 docs/ApiInternalServerErrorResponse.md
 docs/ApiNameService.md
 docs/ApiResolveDomainResponse.md
+docs/ApiReverseResolutionDeleteRequest.md
 docs/ApiSetReverseAddressRequest.md
 docs/ApiTXTRecord.md
 docs/ApiWalletData.md
@@ -50,6 +51,7 @@ superlink/models/api_error_response.py
 superlink/models/api_internal_server_error_response.py
 superlink/models/api_name_service.py
 superlink/models/api_resolve_domain_response.py
+superlink/models/api_reverse_resolution_delete_request.py
 superlink/models/api_set_reverse_address_request.py
 superlink/models/api_txt_record.py
 superlink/models/api_wallet_data.py
@@ -70,6 +72,7 @@ test/test_api_error_response.py
 test/test_api_internal_server_error_response.py
 test/test_api_name_service.py
 test/test_api_resolve_domain_response.py
+test/test_api_reverse_resolution_delete_request.py
 test/test_api_set_reverse_address_request.py
 test/test_api_txt_record.py
 test/test_api_wallet_data.py

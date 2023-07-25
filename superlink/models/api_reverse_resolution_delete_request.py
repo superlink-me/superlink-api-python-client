@@ -20,17 +20,14 @@ import json
 
 
 from typing import Optional
-from pydantic import BaseModel, Field, StrictStr
+from pydantic import BaseModel, StrictStr
 
-class ApiSetReverseAddressRequest(BaseModel):
+class ApiReverseResolutionDeleteRequest(BaseModel):
     """
-    ApiSetReverseAddressRequest
+    ApiReverseResolutionDeleteRequest
     """
-    address: Optional[StrictStr] = None
     domain: Optional[StrictStr] = None
-    signed_message: Optional[StrictStr] = Field(None, alias="signedMessage")
-    user_id: Optional[StrictStr] = Field(None, alias="userId")
-    __properties = ["address", "domain", "signedMessage", "userId"]
+    __properties = ["domain"]
 
     class Config:
         """Pydantic configuration"""
@@ -46,8 +43,8 @@ class ApiSetReverseAddressRequest(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> ApiSetReverseAddressRequest:
-        """Create an instance of ApiSetReverseAddressRequest from a JSON string"""
+    def from_json(cls, json_str: str) -> ApiReverseResolutionDeleteRequest:
+        """Create an instance of ApiReverseResolutionDeleteRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -59,19 +56,16 @@ class ApiSetReverseAddressRequest(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> ApiSetReverseAddressRequest:
-        """Create an instance of ApiSetReverseAddressRequest from a dict"""
+    def from_dict(cls, obj: dict) -> ApiReverseResolutionDeleteRequest:
+        """Create an instance of ApiReverseResolutionDeleteRequest from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return ApiSetReverseAddressRequest.parse_obj(obj)
+            return ApiReverseResolutionDeleteRequest.parse_obj(obj)
 
-        _obj = ApiSetReverseAddressRequest.parse_obj({
-            "address": obj.get("address"),
-            "domain": obj.get("domain"),
-            "signed_message": obj.get("signedMessage"),
-            "user_id": obj.get("userId")
+        _obj = ApiReverseResolutionDeleteRequest.parse_obj({
+            "domain": obj.get("domain")
         })
         return _obj
 
