@@ -19,15 +19,16 @@ import re  # noqa: F401
 import json
 
 
-from typing import Optional
-from pydantic import BaseModel, StrictStr
+from typing import Any, Dict, Optional
+from pydantic import BaseModel, Field, StrictStr
 
-class ApiAccessTokenDeleteRequest(BaseModel):
+class ApiDomainMetadataAttribute(BaseModel):
     """
-    ApiAccessTokenDeleteRequest
+    ApiDomainMetadataAttribute
     """
-    id: Optional[StrictStr] = None
-    __properties = ["id"]
+    trait_type: Optional[StrictStr] = None
+    value: Optional[Dict[str, Any]] = Field(None, description="This can be string or int")
+    __properties = ["trait_type", "value"]
 
     class Config:
         """Pydantic configuration"""
@@ -43,8 +44,8 @@ class ApiAccessTokenDeleteRequest(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> ApiAccessTokenDeleteRequest:
-        """Create an instance of ApiAccessTokenDeleteRequest from a JSON string"""
+    def from_json(cls, json_str: str) -> ApiDomainMetadataAttribute:
+        """Create an instance of ApiDomainMetadataAttribute from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -56,16 +57,17 @@ class ApiAccessTokenDeleteRequest(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> ApiAccessTokenDeleteRequest:
-        """Create an instance of ApiAccessTokenDeleteRequest from a dict"""
+    def from_dict(cls, obj: dict) -> ApiDomainMetadataAttribute:
+        """Create an instance of ApiDomainMetadataAttribute from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return ApiAccessTokenDeleteRequest.parse_obj(obj)
+            return ApiDomainMetadataAttribute.parse_obj(obj)
 
-        _obj = ApiAccessTokenDeleteRequest.parse_obj({
-            "id": obj.get("id")
+        _obj = ApiDomainMetadataAttribute.parse_obj({
+            "trait_type": obj.get("trait_type"),
+            "value": obj.get("value")
         })
         return _obj
 

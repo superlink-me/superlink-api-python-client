@@ -4,7 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**animation_url** | **str** |  | [optional] 
+**attributes** | [**List[ApiDomainMetadataAttribute]**](ApiDomainMetadataAttribute.md) |  | [optional] 
 **avatar** | **str** |  | [optional] 
+**background_color** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **external_url** | **str** |  | [optional] 
 **image** | **str** |  | [optional] 

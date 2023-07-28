@@ -11,6 +11,7 @@ docs/ApiAccessTokenResponse.md
 docs/ApiBadRequestResponse.md
 docs/ApiCoin.md
 docs/ApiDNSRecord.md
+docs/ApiDomainMetadataAttribute.md
 docs/ApiDomainMetadataResponse.md
 docs/ApiErrorResponse.md
 docs/ApiInternalServerErrorResponse.md
@@ -46,6 +47,7 @@ superlink/models/api_access_token_response.py
 superlink/models/api_bad_request_response.py
 superlink/models/api_coin.py
 superlink/models/api_dns_record.py
+superlink/models/api_domain_metadata_attribute.py
 superlink/models/api_domain_metadata_response.py
 superlink/models/api_error_response.py
 superlink/models/api_internal_server_error_response.py
@@ -67,6 +69,7 @@ test/test_api_access_token_response.py
 test/test_api_bad_request_response.py
 test/test_api_coin.py
 test/test_api_dns_record.py
+test/test_api_domain_metadata_attribute.py
 test/test_api_domain_metadata_response.py
 test/test_api_error_response.py
 test/test_api_internal_server_error_response.py

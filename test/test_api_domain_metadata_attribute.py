@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import superlink
-from superlink.models.api_reverse_resolution_delete_request import ApiReverseResolutionDeleteRequest  # noqa: E501
+from superlink.models.api_domain_metadata_attribute import ApiDomainMetadataAttribute  # noqa: E501
 from superlink.rest import ApiException
 
-class TestApiReverseResolutionDeleteRequest(unittest.TestCase):
-    """ApiReverseResolutionDeleteRequest unit test stubs"""
+class TestApiDomainMetadataAttribute(unittest.TestCase):
+    """ApiDomainMetadataAttribute unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,24 +30,25 @@ class TestApiReverseResolutionDeleteRequest(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ApiReverseResolutionDeleteRequest
+        """Test ApiDomainMetadataAttribute
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ApiReverseResolutionDeleteRequest`
+        # uncomment below to create an instance of `ApiDomainMetadataAttribute`
         """
-        model = superlink.models.api_reverse_resolution_delete_request.ApiReverseResolutionDeleteRequest()  # noqa: E501
+        model = superlink.models.api_domain_metadata_attribute.ApiDomainMetadataAttribute()  # noqa: E501
         if include_optional :
-            return ApiReverseResolutionDeleteRequest(
-                domain = 'firstname.lastname'
+            return ApiDomainMetadataAttribute(
+                trait_type = '', 
+                value = None
             )
         else :
-            return ApiReverseResolutionDeleteRequest(
+            return ApiDomainMetadataAttribute(
         )
         """
 
-    def testApiReverseResolutionDeleteRequest(self):
-        """Test ApiReverseResolutionDeleteRequest"""
+    def testApiDomainMetadataAttribute(self):
+        """Test ApiDomainMetadataAttribute"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
