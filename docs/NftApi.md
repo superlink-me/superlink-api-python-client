@@ -47,6 +47,7 @@ with superlink.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -113,6 +114,7 @@ with superlink.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling NftApi->get_token_metadata_by_domain: %s\n" % e)
 ```
+
 
 
 ### Parameters

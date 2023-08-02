@@ -59,6 +59,7 @@ with superlink.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -137,6 +138,7 @@ with superlink.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling ResolutionApi->resolve_data_by_address: %s\n" % e)
 ```
+
 
 
 ### Parameters
@@ -221,6 +223,7 @@ with superlink.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -298,6 +301,7 @@ with superlink.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling ResolutionApi->set_reverse_resolution_address: %s\n" % e)
 ```
+
 
 
 ### Parameters
