@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **created_at** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **label** | **str** |  | [optional] 
+**partner_id** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 **updated_at** | **str** |  | [optional] 
 **valid_from** | **str** |  | [optional] 

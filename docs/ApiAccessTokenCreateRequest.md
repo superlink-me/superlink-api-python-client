@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **label** | **str** |  | [optional] 
-**type** | [**DataAccessTokenType**](DataAccessTokenType.md) |  | [optional] 
 **valid_from** | **str** |  | [optional] 
 **valid_till** | **str** |  | [optional] 
 
