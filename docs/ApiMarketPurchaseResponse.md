@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**checkout_id** | **str** |  | [optional] 
 **stripe_customer_id** | **str** |  | [optional] 
 **stripe_ephemeral_key** | **str** |  | [optional] 
 **stripe_payment_intent** | **str** |  | [optional] 

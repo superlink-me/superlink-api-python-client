@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**customer_email_address** | **str** |  | [optional] 
-**customer_name** | **str** |  | [optional] 
+**checkout_id** | **str** |  | [optional] 
 **domain** | **str** |  | [optional] 
+**external_user_id** | **str** |  | [optional] 
 **owner_address** | **str** |  | [optional] 
 **stripe_connected_account_id** | **str** |  | [optional] 
 
