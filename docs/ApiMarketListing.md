@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **currency** | **str** |  | [optional] 
 **domain** | **str** |  | [optional] 
 **name_service** | **str** |  | [optional] 
-**price** | **float** |  | [optional] 
+**price** | **Dict[str, float]** |  | [optional] 
 
 ## Example
 

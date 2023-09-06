@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **checkout_id** | **str** |  | [optional] 
+**demo** | **bool** |  | [optional] 
 **domain** | **str** |  | [optional] 
 **external_user_id** | **str** |  | [optional] 
 **owner_address** | **str** |  | [optional] 
