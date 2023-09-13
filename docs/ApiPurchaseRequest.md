@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **external_user_id** | **str** |  | [optional] 
 **owner_address** | **str** |  | [optional] 
 **stripe_connected_account_id** | **str** |  | [optional] 
+**years** | **int** |  | [optional] 
 
 ## Example
 
