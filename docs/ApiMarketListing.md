@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency** | **str** |  | [optional] 
 **domain** | **str** |  | [optional] 
+**features** | **List[str]** |  | [optional] 
 **name_service** | **str** |  | [optional] 
 **price** | **Dict[str, float]** |  | [optional] 
 
