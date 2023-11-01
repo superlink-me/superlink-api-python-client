@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **domain** | **str** |  | [optional] 
 **owner_address** | **str** |  | [optional] 
 **owner_email** | **str** |  | [optional] 
+**owner_name** | **str** |  | [optional] 
 **years** | **int** |  | [optional] 
 
 ## Example
