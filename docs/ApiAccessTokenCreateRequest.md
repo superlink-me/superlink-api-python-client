@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **label** | **str** |  | [optional] 
@@ -18,7 +19,7 @@ json = "{}"
 # create an instance of ApiAccessTokenCreateRequest from a JSON string
 api_access_token_create_request_instance = ApiAccessTokenCreateRequest.from_json(json)
 # print the JSON string representation of the object
-print ApiAccessTokenCreateRequest.to_json()
+print(ApiAccessTokenCreateRequest.to_json())
 
 # convert the object into a dict
 api_access_token_create_request_dict = api_access_token_create_request_instance.to_dict()

@@ -20,9 +20,8 @@ Creates an admin token for a partner
 ### Example
 
 * Api Key Authentication (BearerAuth):
+
 ```python
-import time
-import os
 import superlink
 from superlink.models.api_access_token_create_request import ApiAccessTokenCreateRequest
 from superlink.models.api_access_token_response import ApiAccessTokenResponse
@@ -65,6 +64,7 @@ with superlink.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**ApiAccessTokenCreateRequest**](ApiAccessTokenCreateRequest.md)| access token create request | 
@@ -83,6 +83,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -101,9 +102,8 @@ Deletes an access token
 ### Example
 
 * Api Key Authentication (BearerAuth):
+
 ```python
-import time
-import os
 import superlink
 from superlink.models.api_access_token_delete_request import ApiAccessTokenDeleteRequest
 from superlink.rest import ApiException
@@ -143,6 +143,7 @@ with superlink.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**ApiAccessTokenDeleteRequest**](ApiAccessTokenDeleteRequest.md)| access token delete request | 
@@ -161,6 +162,7 @@ void (empty response body)
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -180,9 +182,8 @@ Lists access tokens for a partner
 ### Example
 
 * Api Key Authentication (BearerAuth):
+
 ```python
-import time
-import os
 import superlink
 from superlink.models.api_access_token_response import ApiAccessTokenResponse
 from superlink.rest import ApiException
@@ -222,6 +223,7 @@ with superlink.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -238,6 +240,7 @@ This endpoint does not need any parameter.
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -255,9 +258,8 @@ Returns a list of all purchases
 ### Example
 
 * Api Key Authentication (BearerAuth):
+
 ```python
-import time
-import os
 import superlink
 from superlink.models.api_purchase_list_response import ApiPurchaseListResponse
 from superlink.rest import ApiException
@@ -297,6 +299,7 @@ with superlink.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -313,6 +316,7 @@ This endpoint does not need any parameter.
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

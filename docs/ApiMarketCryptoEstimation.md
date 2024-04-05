@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **exhange_rate** | **float** |  | [optional] 
@@ -18,7 +19,7 @@ json = "{}"
 # create an instance of ApiMarketCryptoEstimation from a JSON string
 api_market_crypto_estimation_instance = ApiMarketCryptoEstimation.from_json(json)
 # print the JSON string representation of the object
-print ApiMarketCryptoEstimation.to_json()
+print(ApiMarketCryptoEstimation.to_json())
 
 # convert the object into a dict
 api_market_crypto_estimation_dict = api_market_crypto_estimation_instance.to_dict()

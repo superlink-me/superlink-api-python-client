@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
@@ -16,7 +17,7 @@ json = "{}"
 # create an instance of ApiAccessTokenDeleteRequest from a JSON string
 api_access_token_delete_request_instance = ApiAccessTokenDeleteRequest.from_json(json)
 # print the JSON string representation of the object
-print ApiAccessTokenDeleteRequest.to_json()
+print(ApiAccessTokenDeleteRequest.to_json())
 
 # convert the object into a dict
 api_access_token_delete_request_dict = api_access_token_delete_request_instance.to_dict()

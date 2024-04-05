@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | **str** |  | [optional] 
@@ -18,7 +19,7 @@ json = "{}"
 # create an instance of ApiWalletData from a JSON string
 api_wallet_data_instance = ApiWalletData.from_json(json)
 # print the JSON string representation of the object
-print ApiWalletData.to_json()
+print(ApiWalletData.to_json())
 
 # convert the object into a dict
 api_wallet_data_dict = api_wallet_data_instance.to_dict()

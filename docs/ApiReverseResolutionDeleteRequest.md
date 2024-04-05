@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain** | **str** |  | [optional] 
@@ -16,7 +17,7 @@ json = "{}"
 # create an instance of ApiReverseResolutionDeleteRequest from a JSON string
 api_reverse_resolution_delete_request_instance = ApiReverseResolutionDeleteRequest.from_json(json)
 # print the JSON string representation of the object
-print ApiReverseResolutionDeleteRequest.to_json()
+print(ApiReverseResolutionDeleteRequest.to_json())
 
 # convert the object into a dict
 api_reverse_resolution_delete_request_dict = api_reverse_resolution_delete_request_instance.to_dict()

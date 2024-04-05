@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **market_listings** | [**List[ApiMarketListing]**](ApiMarketListing.md) |  | [optional] 
@@ -16,7 +17,7 @@ json = "{}"
 # create an instance of ApiMarketSearchResponse from a JSON string
 api_market_search_response_instance = ApiMarketSearchResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiMarketSearchResponse.to_json()
+print(ApiMarketSearchResponse.to_json())
 
 # convert the object into a dict
 api_market_search_response_dict = api_market_search_response_instance.to_dict()

@@ -2,9 +2,12 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **estimations** | [**List[ApiMarketCryptoEstimation]**](ApiMarketCryptoEstimation.md) |  | [optional] 
+**fiat_currency** | **str** |  | [optional] 
+**region** | **str** |  | [optional] 
 
 ## Example
 
@@ -16,7 +19,7 @@ json = "{}"
 # create an instance of ApiMarketCryptoEstimationResponse from a JSON string
 api_market_crypto_estimation_response_instance = ApiMarketCryptoEstimationResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiMarketCryptoEstimationResponse.to_json()
+print(ApiMarketCryptoEstimationResponse.to_json())
 
 # convert the object into a dict
 api_market_crypto_estimation_response_dict = api_market_crypto_estimation_response_instance.to_dict()

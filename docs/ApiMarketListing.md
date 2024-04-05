@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency** | **str** |  | [optional] 
@@ -20,7 +21,7 @@ json = "{}"
 # create an instance of ApiMarketListing from a JSON string
 api_market_listing_instance = ApiMarketListing.from_json(json)
 # print the JSON string representation of the object
-print ApiMarketListing.to_json()
+print(ApiMarketListing.to_json())
 
 # convert the object into a dict
 api_market_listing_dict = api_market_listing_instance.to_dict()

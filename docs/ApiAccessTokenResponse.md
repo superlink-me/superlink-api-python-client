@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **str** |  | [optional] 
@@ -24,7 +25,7 @@ json = "{}"
 # create an instance of ApiAccessTokenResponse from a JSON string
 api_access_token_response_instance = ApiAccessTokenResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiAccessTokenResponse.to_json()
+print(ApiAccessTokenResponse.to_json())
 
 # convert the object into a dict
 api_access_token_response_dict = api_access_token_response_instance.to_dict()

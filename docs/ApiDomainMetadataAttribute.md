@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **trait_type** | **str** |  | [optional] 
@@ -17,7 +18,7 @@ json = "{}"
 # create an instance of ApiDomainMetadataAttribute from a JSON string
 api_domain_metadata_attribute_instance = ApiDomainMetadataAttribute.from_json(json)
 # print the JSON string representation of the object
-print ApiDomainMetadataAttribute.to_json()
+print(ApiDomainMetadataAttribute.to_json())
 
 # convert the object into a dict
 api_domain_metadata_attribute_dict = api_domain_metadata_attribute_instance.to_dict()

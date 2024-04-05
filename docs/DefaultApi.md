@@ -16,9 +16,8 @@ Checks the health of the API
 
 ### Example
 
+
 ```python
-import time
-import os
 import superlink
 from superlink.rest import ApiException
 from pprint import pprint
@@ -45,6 +44,7 @@ with superlink.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -61,6 +61,7 @@ No authorization required
  - **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

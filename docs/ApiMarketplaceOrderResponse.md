@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **base_currency** | **str** |  | [optional] 
@@ -29,7 +30,7 @@ json = "{}"
 # create an instance of ApiMarketplaceOrderResponse from a JSON string
 api_marketplace_order_response_instance = ApiMarketplaceOrderResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiMarketplaceOrderResponse.to_json()
+print(ApiMarketplaceOrderResponse.to_json())
 
 # convert the object into a dict
 api_marketplace_order_response_dict = api_marketplace_order_response_instance.to_dict()

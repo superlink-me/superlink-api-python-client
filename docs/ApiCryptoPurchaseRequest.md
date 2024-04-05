@@ -2,14 +2,16 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency** | **str** |  | [optional] 
-**demo** | **bool** |  | [optional] 
 **domain** | **str** |  | [optional] 
 **owner_address** | **str** |  | [optional] 
 **owner_email** | **str** |  | [optional] 
 **owner_name** | **str** |  | [optional] 
+**partner_id** | **str** |  | [optional] 
+**wallet_addrs** | [**List[ApiAddressRecord]**](ApiAddressRecord.md) |  | [optional] 
 **years** | **int** |  | [optional] 
 
 ## Example
@@ -22,7 +24,7 @@ json = "{}"
 # create an instance of ApiCryptoPurchaseRequest from a JSON string
 api_crypto_purchase_request_instance = ApiCryptoPurchaseRequest.from_json(json)
 # print the JSON string representation of the object
-print ApiCryptoPurchaseRequest.to_json()
+print(ApiCryptoPurchaseRequest.to_json())
 
 # convert the object into a dict
 api_crypto_purchase_request_dict = api_crypto_purchase_request_instance.to_dict()

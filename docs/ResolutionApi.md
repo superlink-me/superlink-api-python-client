@@ -18,9 +18,8 @@ resolve domain data by address
 ### Example
 
 * Api Key Authentication (BearerAuth):
+
 ```python
-import time
-import os
 import superlink
 from superlink.models.api_resolve_domain_response import ApiResolveDomainResponse
 from superlink.rest import ApiException
@@ -63,6 +62,7 @@ with superlink.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address** | **str**| 0x1234561234556 | 
@@ -82,6 +82,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -100,9 +101,8 @@ resolve domain data by domain
 ### Example
 
 * Api Key Authentication (BearerAuth):
+
 ```python
-import time
-import os
 import superlink
 from superlink.models.api_resolve_domain_response import ApiResolveDomainResponse
 from superlink.rest import ApiException
@@ -146,6 +146,7 @@ with superlink.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| firstname.lastname | 
@@ -166,6 +167,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

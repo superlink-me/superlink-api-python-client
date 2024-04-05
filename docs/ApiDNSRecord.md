@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
@@ -19,7 +20,7 @@ json = "{}"
 # create an instance of ApiDNSRecord from a JSON string
 api_dns_record_instance = ApiDNSRecord.from_json(json)
 # print the JSON string representation of the object
-print ApiDNSRecord.to_json()
+print(ApiDNSRecord.to_json())
 
 # convert the object into a dict
 api_dns_record_dict = api_dns_record_instance.to_dict()

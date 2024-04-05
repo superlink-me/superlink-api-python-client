@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **str** |  | [optional] 
@@ -19,7 +20,7 @@ json = "{}"
 # create an instance of ApiPartnerResponse from a JSON string
 api_partner_response_instance = ApiPartnerResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiPartnerResponse.to_json()
+print(ApiPartnerResponse.to_json())
 
 # convert the object into a dict
 api_partner_response_dict = api_partner_response_instance.to_dict()

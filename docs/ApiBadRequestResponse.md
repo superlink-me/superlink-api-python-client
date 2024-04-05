@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **errors** | [**List[ApiErrorResponse]**](ApiErrorResponse.md) |  | [optional] 
@@ -16,7 +17,7 @@ json = "{}"
 # create an instance of ApiBadRequestResponse from a JSON string
 api_bad_request_response_instance = ApiBadRequestResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiBadRequestResponse.to_json()
+print(ApiBadRequestResponse.to_json())
 
 # convert the object into a dict
 api_bad_request_response_dict = api_bad_request_response_instance.to_dict()

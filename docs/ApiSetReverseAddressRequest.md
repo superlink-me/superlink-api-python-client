@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | **str** |  | [optional] 
@@ -19,7 +20,7 @@ json = "{}"
 # create an instance of ApiSetReverseAddressRequest from a JSON string
 api_set_reverse_address_request_instance = ApiSetReverseAddressRequest.from_json(json)
 # print the JSON string representation of the object
-print ApiSetReverseAddressRequest.to_json()
+print(ApiSetReverseAddressRequest.to_json())
 
 # convert the object into a dict
 api_set_reverse_address_request_dict = api_set_reverse_address_request_instance.to_dict()

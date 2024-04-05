@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **key** | **str** |  | [optional] 
@@ -17,7 +18,7 @@ json = "{}"
 # create an instance of ApiTXTRecord from a JSON string
 api_txt_record_instance = ApiTXTRecord.from_json(json)
 # print the JSON string representation of the object
-print ApiTXTRecord.to_json()
+print(ApiTXTRecord.to_json())
 
 # convert the object into a dict
 api_txt_record_dict = api_txt_record_instance.to_dict()

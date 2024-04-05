@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **str** |  | [optional] 
@@ -16,7 +17,7 @@ json = "{}"
 # create an instance of ApiInternalServerErrorResponse from a JSON string
 api_internal_server_error_response_instance = ApiInternalServerErrorResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiInternalServerErrorResponse.to_json()
+print(ApiInternalServerErrorResponse.to_json())
 
 # convert the object into a dict
 api_internal_server_error_response_dict = api_internal_server_error_response_instance.to_dict()

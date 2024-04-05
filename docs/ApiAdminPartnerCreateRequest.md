@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
@@ -16,7 +17,7 @@ json = "{}"
 # create an instance of ApiAdminPartnerCreateRequest from a JSON string
 api_admin_partner_create_request_instance = ApiAdminPartnerCreateRequest.from_json(json)
 # print the JSON string representation of the object
-print ApiAdminPartnerCreateRequest.to_json()
+print(ApiAdminPartnerCreateRequest.to_json())
 
 # convert the object into a dict
 api_admin_partner_create_request_dict = api_admin_partner_create_request_instance.to_dict()

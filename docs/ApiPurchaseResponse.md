@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency** | **str** |  | [optional] 
@@ -21,7 +22,7 @@ json = "{}"
 # create an instance of ApiPurchaseResponse from a JSON string
 api_purchase_response_instance = ApiPurchaseResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiPurchaseResponse.to_json()
+print(ApiPurchaseResponse.to_json())
 
 # convert the object into a dict
 api_purchase_response_dict = api_purchase_response_instance.to_dict()

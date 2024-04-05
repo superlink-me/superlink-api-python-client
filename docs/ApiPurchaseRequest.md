@@ -2,14 +2,16 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **checkout_id** | **str** |  | [optional] 
-**demo** | **bool** |  | [optional] 
 **domain** | **str** |  | [optional] 
 **external_user_id** | **str** |  | [optional] 
 **owner_address** | **str** |  | [optional] 
+**partner_id** | **str** |  | [optional] 
 **stripe_connected_account_id** | **str** |  | [optional] 
+**wallet_addrs** | [**List[ApiAddressRecord]**](ApiAddressRecord.md) |  | [optional] 
 **years** | **int** |  | [optional] 
 
 ## Example
@@ -22,7 +24,7 @@ json = "{}"
 # create an instance of ApiPurchaseRequest from a JSON string
 api_purchase_request_instance = ApiPurchaseRequest.from_json(json)
 # print the JSON string representation of the object
-print ApiPurchaseRequest.to_json()
+print(ApiPurchaseRequest.to_json())
 
 # convert the object into a dict
 api_purchase_request_dict = api_purchase_request_instance.to_dict()

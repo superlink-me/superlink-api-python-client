@@ -17,9 +17,8 @@ returns the image for a \"domain\" nft
 
 ### Example
 
+
 ```python
-import time
-import os
 import superlink
 from superlink.rest import ApiException
 from pprint import pprint
@@ -50,6 +49,7 @@ with superlink.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| firstname.lastname | 
@@ -68,6 +68,7 @@ No authorization required
  - **Accept**: image/svg+xml
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -85,9 +86,8 @@ returns the metadata for a \"domain\" nft
 
 ### Example
 
+
 ```python
-import time
-import os
 import superlink
 from superlink.models.api_domain_metadata_response import ApiDomainMetadataResponse
 from superlink.rest import ApiException
@@ -119,6 +119,7 @@ with superlink.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| firstname.lastname | 
@@ -137,6 +138,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **animation_url** | **str** |  | [optional] 
@@ -26,7 +27,7 @@ json = "{}"
 # create an instance of ApiDomainMetadataResponse from a JSON string
 api_domain_metadata_response_instance = ApiDomainMetadataResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiDomainMetadataResponse.to_json()
+print(ApiDomainMetadataResponse.to_json())
 
 # convert the object into a dict
 api_domain_metadata_response_dict = api_domain_metadata_response_instance.to_dict()

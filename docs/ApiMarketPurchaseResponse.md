@@ -2,13 +2,14 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **checkout_id** | **str** |  | [optional] 
 **order_id** | **str** |  | [optional] 
+**stripe_checkout_session** | **str** |  | [optional] 
 **stripe_customer_id** | **str** |  | [optional] 
 **stripe_ephemeral_key** | **str** |  | [optional] 
-**stripe_payment_intent** | **str** |  | [optional] 
 **stripe_publishable_key** | **str** |  | [optional] 
 
 ## Example
@@ -21,7 +22,7 @@ json = "{}"
 # create an instance of ApiMarketPurchaseResponse from a JSON string
 api_market_purchase_response_instance = ApiMarketPurchaseResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiMarketPurchaseResponse.to_json()
+print(ApiMarketPurchaseResponse.to_json())
 
 # convert the object into a dict
 api_market_purchase_response_dict = api_market_purchase_response_instance.to_dict()

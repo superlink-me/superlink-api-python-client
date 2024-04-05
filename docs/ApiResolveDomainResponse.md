@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **content_hash** | **str** |  | [optional] 
@@ -22,7 +23,7 @@ json = "{}"
 # create an instance of ApiResolveDomainResponse from a JSON string
 api_resolve_domain_response_instance = ApiResolveDomainResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiResolveDomainResponse.to_json()
+print(ApiResolveDomainResponse.to_json())
 
 # convert the object into a dict
 api_resolve_domain_response_dict = api_resolve_domain_response_instance.to_dict()

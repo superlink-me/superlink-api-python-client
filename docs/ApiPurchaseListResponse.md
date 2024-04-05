@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **purchases** | [**List[ApiPurchaseResponse]**](ApiPurchaseResponse.md) |  | [optional] 
@@ -16,7 +17,7 @@ json = "{}"
 # create an instance of ApiPurchaseListResponse from a JSON string
 api_purchase_list_response_instance = ApiPurchaseListResponse.from_json(json)
 # print the JSON string representation of the object
-print ApiPurchaseListResponse.to_json()
+print(ApiPurchaseListResponse.to_json())
 
 # convert the object into a dict
 api_purchase_list_response_dict = api_purchase_list_response_instance.to_dict()
