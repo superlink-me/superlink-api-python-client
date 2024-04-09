@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**parentdomain_validation**](SubdomainApi.md#parentdomain_validation) | **GET** /v1/parentdomains/{parentDomain} | Validates if parent domain is correctly configured for use with ens subdomains
 [**subdomain_available**](SubdomainApi.md#subdomain_available) | **GET** /v1/parentdomains/{parentDomain}/subdomains/{subDomainName} | Returns subdomain availability
 [**subdomain_claimed**](SubdomainApi.md#subdomain_claimed) | **GET** /v1/parentdomains/{parentDomain}/claimed/{ethAddress} | Returns subdomain availability
+[**subdomain_invalidate_claim_rate_limit**](SubdomainApi.md#subdomain_invalidate_claim_rate_limit) | **DELETE** /v1/parentdomains/{parentDomain}/invalidate-claim-rate-limit | Invalidates the claim rate limit for the current IP
 [**subdomain_list**](SubdomainApi.md#subdomain_list) | **GET** /v1/parentdomains/{parentDomain}/list | Paginates over all subdomains in descending order of the creation date
 [**subdomain_mint**](SubdomainApi.md#subdomain_mint) | **POST** /v1/parentdomains/{parentDomain}/subdomains/{subDomainName} | Creates a subdomain for provided parentdomain
 [**subdomain_mint_sig**](SubdomainApi.md#subdomain_mint_sig) | **POST** /v1/parentdomains/{parentDomain}/subdomains/{subDomainName}/mint-with-sig | Creates a subdomain for provided parentdomain with signature
@@ -403,6 +404,84 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | OK |  -  |
 **400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **subdomain_invalidate_claim_rate_limit**
+> subdomain_invalidate_claim_rate_limit(parent_domain)
+
+Invalidates the claim rate limit for the current IP
+
+Invalidates the claim rate limit for the current IP
+
+### Example
+
+* Api Key Authentication (BearerAuth):
+
+```python
+import superlink
+from superlink.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.superlink.me
+# See configuration.py for a list of all supported configuration parameters.
+configuration = superlink.Configuration(
+    host = "https://api.superlink.me"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerAuth
+configuration.api_key['BearerAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with superlink.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = superlink.SubdomainApi(api_client)
+    parent_domain = 'parent_domain_example' # str | superlink.me
+
+    try:
+        # Invalidates the claim rate limit for the current IP
+        api_instance.subdomain_invalidate_claim_rate_limit(parent_domain)
+    except Exception as e:
+        print("Exception when calling SubdomainApi->subdomain_invalidate_claim_rate_limit: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **parent_domain** | **str**| superlink.me | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

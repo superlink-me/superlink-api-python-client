@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "superlink"
-version = "v0.4.2"
+version = "v0.5.0"
 description = "Superlink"
 authors = ["API Support <support@superlink.me>"]
 license = "MIT"
